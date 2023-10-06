@@ -1,5 +1,4 @@
 #bps-ann-bar {
-    padding: 0 4%;
     text-align: center;
     background-color: #007A6A;
 }
@@ -14,12 +13,18 @@
 }
 
 @media screen and (max-width: 991px) {
+    #bps-ann-bar {
+        padding: 0 4%;
+    }
     .bps-ann-bar-message {
         font-size: 10px;
     }
 }
 
 @media screen and (min-width: 992px) {
+    #bps-ann-bar {
+        padding: 0 5%;
+    }
     .bps-ann-bar-message {
         font-size: 12px;
     }

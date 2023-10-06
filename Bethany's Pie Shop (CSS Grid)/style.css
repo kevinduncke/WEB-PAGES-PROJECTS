@@ -9,7 +9,18 @@ html, body {
 }
 
 header {
-    position: absolute;
     z-index: 10;
     width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 992px){
+    header {
+        position: absolute;
+    }
 }
