@@ -23,11 +23,7 @@
     letter-spacing: 1px;
     color: white!important;
 }
-
 @media screen and (max-width: 991px) {
-    .navbar {
-        background: white;
-    }
     .navbar {
         padding: 2.8% 4%;
     }
@@ -44,7 +40,6 @@
         height: 100vh;
     } */
 }
-
 @media screen and (min-width: 992px){
     .nav-link {
         font-size: 15px;

@@ -17,6 +17,10 @@ header {
     header {
         position: relative;
     }
+    .bps-main-minintro {
+        margin: 50px 0;
+        background-color: rgb(178, 178, 32);
+    }    
 }
 
 @media screen and (min-width: 992px){
