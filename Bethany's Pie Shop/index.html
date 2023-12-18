@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/announcement-bar.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/banner.css">
+    <link rel="stylesheet" href="./styles/news.css">
 </head>
 <body>
     <header>
@@ -27,9 +28,28 @@
                 <img src="./img/pie.png" id="bps-header-logo" alt="Bethany's Pie Shop Logo" height="725" width="1027">
                 <p id="bps-header-trade">Bethany's Pie Shop</p>
               </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button id="navbar-open" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px" viewBox="0 0 448 512">
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - 
+                    https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. 
+                  -->
+                  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 
+                  128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 
+                  32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 
+                  32-32H416c17.7 0 32 14.3 32 32z"/>
+                </svg>
               </button>
+              <button id="navbar-close" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px" viewBox="0 0 384 512">
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - 
+                    https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. 
+                  -->
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 
+                  105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 
+                  12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 
+                  45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                </svg>
+              </button>              
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-search">
                   <form class="d-flex" role="search">
@@ -48,30 +68,33 @@
                 </div>                
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Pies
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Cherry Pie</a></li>
+                      <li><a class="dropdown-item" href="#">Cranberry Pie</a></li>
+                      <li><a class="dropdown-item" href="#">Apple Pie</a></li>
+                      <li><a class="dropdown-item" href="#">Blueberry Pie</a></li>
+                      <li><a class="dropdown-item" href="#">Pumpkin Pie</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">All Pies</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Subscribe</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">Wholesale</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                   </li>
                 </ul>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-uls navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
                   </li>
@@ -79,7 +102,7 @@
                     <a class="nav-link" href="#">Work with Us</a>
                   </li>
                 </ul>     
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-uls navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link" href="#">hello@bethanyspieshop.com</a>
                   </li>
@@ -140,7 +163,6 @@
               </div>
             </div>
         </nav>
-        
     </header>
     <main>
       <!-- BANNER SECTION -->
@@ -169,6 +191,22 @@
             </div>
           </div>
         </section>
+        <section class="bps-main-news-sect">
+          <h2 id="bps-main-news-h2">What's new and <br> special this summer</h2>
+          <div>
+            <div class="bps-main-news-c-dimg">
+              <img class="bps-main-news-c-img" src="./img/cherrypiesmall.jpg" alt="cherrypie">
+            </div>
+            <div class="bps-main-news-c-dinfo">
+              <h3 class="bps-main-news-c-h3">Fresh strawberry dream pie</h3>
+              <p>
+                Looking for a simple and humble pie?, you've
+                found it. It's filled with fresh, sweet strawberries
+                coated in a light strawberry glaze.
+              </p>
+            </div>
+          </div>
+        </section>
     </main>
 
     <!-- <footer>
@@ -176,6 +214,6 @@
     </footer> -->
     <script src="./res/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./res/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

@@ -4,12 +4,14 @@
 .bps-main-banner-h1 h1 {
     text-transform: uppercase;
     font-weight: 700;
+    letter-spacing: 3px;
     color: white;
 }
 .bps-main-banner-h1 p{
     font-weight: 400;
     text-transform: none;
     color: white;
+    letter-spacing: 1.5px;
 }
 #bps-main-banner {
     align-items: center;
@@ -21,89 +23,50 @@
     text-align: center;
     transform-style: preserve-3d;
 }
-#bps-main-banner:before {
-    animation: no-transform 2s .5s cubic-bezier(0, .5, 0, 1) forwards;
-    background: linear-gradient(to bottom, rgba(0,0,0,0),
-        rgba(0,0,0,.8)),
-        url(../img/bethany-fullsize.jpg) no-repeat bottom;
-    background-size: cover;
-    content: "";
-    opacity: 0;
-    /* transform: translateY(-4rem); */
-    position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    z-index: -1;
-}
-#bps-main-banner:after {
-    background: #F9FCFF;
-    content: "";
-    height: 40rem;
-    left: -5%;
-    position: absolute;
-        right: -5%;
-        top: 100%;
-    transform-origin: 0 0;
-    transform: rotateZ(-6deg);
-}
-@keyframes no-transform {
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
+.bps-main-banner-button {
+    margin-top: 50px;
+} 
+.bps-main-banner-h1 a {
+    background-color: #23CFA7;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}      
+
 @media screen and (max-width: 991px) {
     #bps-main-banner {
         align-items: normal;
-    }
-    #bps-main-banner:before {
         background: linear-gradient(to bottom, rgba(0,0,0,0),
             rgba(0,0,0,.8)),
             url(../img/ulysse-pointcheval-1WmlAiYgnoI-unsplash.jpg) 
             no-repeat bottom;        
         background-position: center;
-    }
-    #bps-main-banner:after {
-        height: 100rem;
-        left: -180%;
-        position: absolute;
-            right: -10%;
-            top: 100%;
-        transform: rotateZ(-9deg);
-    }    
+        background-size: cover;
+        height: 100vh;
+    }  
     .bps-main-banner-h1 {
-        margin-top: 5rem;
+        margin-top: 10rem;
         margin-left: 5%;
         padding: 1rem 0;
         text-align: left;
     }
     .bps-main-banner-h1 h1{
         font-size: 40px;
-        letter-spacing: 3px;
         line-height: 60px;
     }    
     .bps-main-banner-h1 p{
         font-size: 18px;
         margin-top: 45px;
         margin-right: 35px;
-        letter-spacing: 1.5px;
-    }
-    .bps-main-banner-button {
-        margin-top: 50px;
     }
     .bps-main-banner-h1 a {
-        background-color: #23CFA7;
-        border: none;
-        border-bottom-right-radius: 25px;
-        padding: 15px 25px;
-        color: white;
         font-size: 16px;
-        text-decoration: none;
     }
     .bps-main-banner-arrow {
-        margin-top: 125px;
+        margin-top: 175px;
         text-align: center;
     }
     .bps-main-banner-arrow svg {
@@ -111,6 +74,9 @@
     }
 }
 @media screen and (min-width: 992px){
+    .navbar-toggler {
+        display: none;
+    }
     .bps-main-banner-h1 {
         margin-top: 1rem;
         margin-left: 4%;
@@ -121,29 +87,51 @@
     }
     .bps-main-banner-h1 h1{
         font-size: 60px;
-        letter-spacing: 3px;
         line-height: 80px;
     }
     .bps-main-banner-h1 p{
         font-size: 20px;
         margin-top: 25px;
         margin-right: 35px;
-        letter-spacing: 1.5px;
         width: 65%;
     } 
-    .bps-main-banner-button {
-        margin-top: 50px;
-    }
     .bps-main-banner-h1 a {
-        background-color: #23CFA7;
-        border: none;
-        border-bottom-right-radius: 25px;
-        padding: 15px 25px;
-        color: white;
         font-size: 18px;
-        text-decoration: none;
-    }    
+    }        
     .bps-main-banner-arrow {
         display: none;
     }   
+    #bps-main-banner:before {
+        animation: no-transform 2s .5s cubic-bezier(0, .5, 0, 1) forwards;
+        background: linear-gradient(to bottom, rgba(0,0,0,0),
+            rgba(0,0,0,.8)),
+            url(../img/bethany-fullsize.jpg) no-repeat bottom;
+        background-size: cover;
+        content: "";
+        opacity: 0;
+        /* transform: translateY(-4rem); */
+        position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        z-index: -1;
+    }
+    #bps-main-banner:after {
+        background: #F9FCFF;
+        content: "";
+        height: 40rem;
+        left: -5%;
+        position: absolute;
+            right: -5%;
+            top: 100%;
+        transform-origin: 0 0;
+        transform: rotateZ(-4deg);
+    }
+    @keyframes no-transform {
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }    
 }
